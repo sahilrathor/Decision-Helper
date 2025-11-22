@@ -18,7 +18,7 @@ export interface GenericStore<T> {
  *
  * @returns
  */
-export function createGenericStore<T>(
+function createGenericStore<T>(
     initialValue: T,
     persistStore: boolean = false,
     persistKey: string = "generic-store"
@@ -47,3 +47,5 @@ export function createGenericStore<T>(
           )
         : create<GenericStore<T>>(baseConfig);
 }
+
+export default createGenericStore;
